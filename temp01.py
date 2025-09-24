@@ -19,3 +19,20 @@ def find_maximum(numbers):
         raise ValueError("The list cannot be empty")
     return max(numbers)
 print(find_maximum([3, 1, 4, 1, 5, 9, 2, 6, 5]))  # Example usage
+
+
+#寫一個程式，從1印到100
+#如果數字是3的倍數，印出"Fizz"
+#如果數字是5的倍數，印出"Buzz"
+#如果數字同時是3和5的倍數，印出"FizzBuzz"
+#其他數字則印出數字本身
+for i in range(1, 101):
+    if i % 3 == 0 and i % 5 == 0:
+        print("FizzBuzz")
+    elif i % 3 == 0:
+        print("Fizz")
+    elif i % 5 == 0:
+        print("Buzz")
+    else:
+        print(i)
+        
