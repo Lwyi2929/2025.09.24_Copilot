@@ -13,7 +13,7 @@ students = [
 ]
 
 # 寫一個函式，接收一個數字列表，回傳列表中的最大值
-from typing import List, Any
+from typing import List
 def find_maximum(numbers: List[float]) -> float:
     """
     回傳數字列表中的最大值。
