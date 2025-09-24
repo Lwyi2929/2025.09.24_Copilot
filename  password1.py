@@ -25,3 +25,5 @@ def check_password_strength(password: str) -> str:
         return "中"
     else:
         return "強"
+    
+print(check_password_strength("Password123!"))  # Example usage
