@@ -13,11 +13,24 @@ students = [
 ]
 
 # 寫一個函式，接收一個數字列表，回傳列表中的最大值
-def find_maximum(numbers):
-    """Return the maximum value from a list of numbers."""
+from typing import List, Any
+def find_maximum(numbers: List[float]) -> float:
+    """
+    回傳數字列表中的最大值。
+    參數:
+        numbers (List[float]): 一個數字型別的列表。
+    回傳:
+        float: 列表中的最大值。
+    拋出:
+        ValueError: 如果列表為空則拋出。
+    """
     if not numbers:
-        raise ValueError("The list cannot be empty")
+        raise ValueError("輸入的數字列表不可為空 (The list cannot be empty)")
+    # 檢查所有元素是否為數字型別
+    if not all(isinstance(x, (int, float)) for x in numbers):
+        raise TypeError("所有元素必須為 int 或 float")
     return max(numbers)
+
 print(find_maximum([3, 1, 4, 1, 5, 9, 2, 6, 5]))  # Example usage
 
 
@@ -35,4 +48,3 @@ for i in range(1, 101):
         print("Buzz")
     else:
         print(i)
-        
